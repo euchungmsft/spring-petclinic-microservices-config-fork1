@@ -80,6 +80,6 @@ spring:
     schema: classpath*:db/mysql/schema.sql
     data: classpath*:db/mysql/data.sql
     url: jdbc:mysql://localhost:3306/petclinic?useSSL=false
-    username: root
-    password: petclinic
+    username: myadmin@springappsmysql1e8d31
+    password: petc$1AOs123sdf#
     initialization-mode: ALWAYS
