@@ -83,6 +83,15 @@ spring:
     # username: root
     # password: petclinic
     url: jdbc:mysql://springappsmysql52bf4e.mysql.database.azure.com:3306/petclinic?useSSL=true
-    username: myadmin@springappsmysql52bf4e
-    password: saKJHds$^2df  
+    # username: myadmin@springappsmysql52bf4e
+    # password: saKJHds$^2df  
     initialization-mode: ALWAYS
+  cloud:
+    azure:
+      keyvault:
+        secret:
+          property-source-enabled: true
+          property-sources:
+            - name: key-vault-property-source-1
+              endpoint: https://springappskv52bf4e.vault.azure.net/
+              credential.managed-identity-enabled: true  
