@@ -83,6 +83,11 @@ spring:
     username: myadmin@springappsmysql1e8d31
     password: petc$1AOs123sdf#
     initialization-mode: ALWAYS
+  jms:
+    servicebus:
+      connection-string: ${spring.jms.servicebus.connection-string}
+      idle-timeout: 60000
+      pricing-tier: premium    
 
 cloud:
   azure:
