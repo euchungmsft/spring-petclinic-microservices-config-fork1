@@ -86,6 +86,11 @@ spring:
     # username: myadmin@springappsmysql52bf4e
     # password: saKJHds$^2df  
     initialization-mode: ALWAYS
+  jms:
+    servicebus:
+      connection-string: ${spring.jms.servicebus.connection-string}
+      idle-timeout: 60000
+      pricing-tier: premium    
   cloud:
     azure:
       keyvault:
