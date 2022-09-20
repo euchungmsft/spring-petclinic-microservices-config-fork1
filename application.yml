@@ -80,32 +80,6 @@ spring:
     schema: classpath*:db/mysql/schema.sql
     data: classpath*:db/mysql/data.sql
     url: jdbc:mysql://localhost:3306/petclinic?useSSL=false
-    username: myadmin@springappsmysql1e8d31
-    password: petc$1AOs123sdf#
+    username: root
+    password: petclinic
     initialization-mode: ALWAYS
-  jms:
-    servicebus:
-      connection-string: ${spring.jms.servicebus.connection-string}
-      idle-timeout: 60000
-      pricing-tier: premium    
-  kafka:
-    bootstrap-servers: springappseh1e8d31.servicebus.windows.net:9093
-    client-id: first-service
-    group-id: $Default
-    properties:
-      sasl.jaas.config: 
-      sasl.mechanism: PLAIN
-      security.protocol: SASL_SSL
-      spring.json:
-        use.type.headers: false
-        value.default.type: com.targa.labs.dev.telemetrystation.Message
-
-cloud:
-  azure:
-    keyvault:
-      secret:
-        property-source-enabled: true
-        property-sources:
-          - name: key-vault-property-souece-1
-            endpoint: https://springappskv1e8d31.vault.azure.net/
-            credential.managed-identity-enabled: true
